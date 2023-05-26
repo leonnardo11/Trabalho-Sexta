@@ -7,6 +7,25 @@ const app = express();
 const port = 5000;
 const uri = 'mongodb+srv://admin:admin123@cluster0.zckt5xg.mongodb.net/?retryWrites=true&w=majority';
 
+
+// CRIAR BANCO DE DADOS CASO NÃO TENHA
+// mongoose
+//   .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+//   .then(() => {
+//     // Criar a base de dados e a coleção
+//     mongoose.connection.db.createCollection('Database_pilotos', (err) => {
+//       if (err) {
+//         console.error('Erro ao criar a coleção "pilotos":', err);
+//       } else {
+//         console.log('Coleção "pilotos" criada com sucesso.');
+//       }
+//     });
+//     console.log('Conectado ao banco de dados MongoDB.');
+//   })
+//   .catch((err) => {
+//     console.error('Erro ao conectar ao banco de dados:', err);
+//   });
+
 // Conexão com o banco de dados
 mongoose
   .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
